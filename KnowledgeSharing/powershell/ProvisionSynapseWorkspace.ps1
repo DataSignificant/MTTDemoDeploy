@@ -3,4 +3,4 @@ param(
     [string]$MESSAGE = "HELLO WORLD"
 )
 
-Write-Output $MESSAGE;
+Write-Output $MESSAGE

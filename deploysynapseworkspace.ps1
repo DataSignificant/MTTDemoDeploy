@@ -1,1 +1,1 @@
-write "jean daniel"
+Write-Output "jean daniel"

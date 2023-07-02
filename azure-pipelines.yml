@@ -10,10 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'ME-MngEnvMCAP734805-jeanjoseph-1(b635aca8-b9cc-4989-ab6e-23d330614423)'
+    ScriptType: 'InlineScript'
+    Inline: 'New-AzSqlServer -ResourceGroupName "svr-dp300-labs" -Location "Central US" -ServerName "DP-300-Labs-Demo" -ComputeModel "Serverless" -SampleName "AdventureWorksLT" -Edition "GeneralPurpose" -ServerVersion "12.0"'

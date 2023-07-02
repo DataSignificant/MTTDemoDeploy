@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- synapse
 
 pool:
   vmImage: ubuntu-latest

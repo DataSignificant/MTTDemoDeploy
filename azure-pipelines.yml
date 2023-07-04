@@ -10,8 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AzurePowerShell@5
+- task: PowerShell@2
+  displayName: 'powershell script'
   inputs:
-    azureSubscription: 'ME-MngEnvMCAP734805-jeanjoseph-1(b635aca8-b9cc-4989-ab6e-23d330614423)'
-    ScriptType: 'InlineScript'
-    Inline: 'New-AzSqlServer -ResourceGroupName "svr-dp300-labs" -Location "Central US" -ServerName "DP-300-Labs-Demo" -ComputeModel "Serverless" -SampleName "AdventureWorksLT" -Edition "GeneralPurpose" -ServerVersion "12.0"'
+    filePath: 'deploysynapseworkspace.ps1'

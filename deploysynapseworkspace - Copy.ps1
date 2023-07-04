@@ -4,13 +4,13 @@ Install-Module -Name Az -Scope CurrentUser
 
 
 # Connect to Azure Account
-# $azAccount = Connect-AzAccount -Subscription "ME-MngEnvMCAP734805-jeanjoseph-1"
+$azAccount = Connect-AzAccount -Subscription "ME-MngEnvMCAP734805-jeanjoseph-1"
 
 
 <# Set Azure default -Subscription
 Set-AzContext -Subscription "Internal Microsoft Subscription"
 #>
-#Set-AzContext -Subscription "ME-MngEnvMCAP734805-jeanjoseph-1"
+Set-AzContext -Subscription "ME-MngEnvMCAP734805-jeanjoseph-1"
 
 
 
